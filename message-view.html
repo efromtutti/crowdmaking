@@ -1,0 +1,480 @@
+﻿
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+    <title>Clarity</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="css/core.css" type="text/css" media="all"/>
+    <link type="text/css" href="css/overcast/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
+    <link rel='stylesheet' type='text/css' href='css/fullcalendar.css' />
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,700italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" media="screen" type="text/css" href="js/colorpicker/css/colorpicker.css" />
+    <link rel="stylesheet" type="text/css" href="js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" href="js/elrte-1.3/css/elrte.full-custom.css" type="text/css" media="screen" charset="utf-8">
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.layout.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+
+    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot/excanvas.min.js"></script><![endif]-->
+    <script type="text/javascript" src="js/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="js/flot/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="js/flot/jquery.flot.pie.js"></script>
+    <script type="text/javascript" src="js/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="js/styleswitcher.js"></script>
+    <script type='text/javascript' src='js/fullcalendar/fullcalendar.min.js'></script>
+    <script type="text/javascript" src="js/colorpicker/js/colorpicker.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="js/onmediaquery.min.js"></script>
+    <script src="js/elrte-1.3/js/elrte.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Scripts inside js/application.js-->
+    
+    <script type="text/javascript" src="js/application-other-pages.js"></script>
+    <![if !IE]>
+    <script type="text/javascript" src="js/responsive-messages.js"></script>
+    <![endif]>
+
+    <!--[if lte IE 10]><script language="javascript" type="text/javascript" src="js/responsive-messages-IE.js"></script><![endif]-->
+   <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34088163-1']);
+  _gaq.push(['_setDomainName', 'vibrance.co']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </head>
+  <body>
+
+    <div class="ui-layout-north topbar">
+      <h1><img src="img/clarity-logo.png" />CLARITY</h1>
+        <div class="notifyHeader">
+        <span class="dropdown notifications" id="menu2">
+            <a class="dropdown-toggle" id="notifyNumber" data-toggle="dropdown" href="#menu2">
+              3
+            </a>
+            <ul class="dropdown-menu">
+              <li>NOTIFICATIONS:</li>
+              <li><a href="#"><img src="img/4.jpg" />
+                            <h5>Catalina Butnaru</h5>
+                             <i class="icon-envelope"></i> Sent you a message.<p>3 minutes ago.</p></a></li>
+              <li><a href="#"><img src="img/BryanMcAnulty.png" />
+                            <h5>Bryan McAnulty</h5>
+                             <i class="icon-comment"></i> Posted a comment.<p>5 hours ago.</p></a></li>
+              <li><a href="#"><img src="img/2.jpg" />
+                            <h5>Ashley Green</h5>
+                             <i class="icon-plus"></i> Uploaded a new file.<p>Yesterday</p></a></li>
+              <li><a href="#"><img src="img/1.jpg" />
+                            <h5>Matt Brink</h5>
+                             <i class="icon-ok"></i> Completed a task.<p>Yesterday</p></a></li>
+              <li><a href="#"><img src="img/3.jpg" />
+                            <h5>Jack Koner</h5>
+                             <i class="icon-comment"></i> Posted a comment.<p>Two days ago.</p></a></li>
+              <li><a href="#">View all notifications.</a></li>
+            </ul>
+        </span>
+        </div>
+      <ul id="headerNav">
+            <li class="headerNavList"><span class="dropdown" id="menu3">
+                <a class="dropdown-toggle btn-navbar" data-toggle="dropdown" href="#menu3">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="index.html"><i class="icon-home"></i> Dashboard</a></li>
+                  <li class="divider"></li>
+                  <li><a href="message-view.html"><i class="icon-inbox"></i> Messages</a></li>
+                  <li class="divider"></li>
+                  <li><a href="graph-view.html"><i class="icon-signal"></i> Graphs</a></li>
+                  <li class="divider"></li>
+                  <li><a href="calendar.html"><i class="icon-calendar"></i> Calendar</a></li>
+                  <li class="divider"></li>
+                  <li><a href="widgets.html"><i class="icon-cog"></i> Widgets &amp; More</a></li>
+                  <li class="divider"></li>
+                  <li><a href="typography.html"><i class="icon-font"></i> Typography</a></li>
+                  <li class="divider"></li>
+                  <li><a href="ui-elements.html"><i class="icon-plus-sign"></i> UI Elements</a></li>
+                  <li class="divider"></li>
+                  <li><a href="buttons.html"><i class="icon-ok-sign"></i> Buttons</a></li>
+                  <li class="divider"></li>
+                  <li><a href="error-pages.html"><i class="icon-warning-sign"></i> Error Pages</a></li>
+                </ul>
+            </span></li>
+      </ul>
+        <a class="btn theme-btn" data-toggle="modal" href="#myModal" ><i class="icon-edit icon-white"></i> New Task</a>
+        
+      <div id="search">
+        <i class="icon-search search-inside"></i><input placeholder="Search..." type="text" />
+      </div>
+      <div class="login">
+            <span class="dropdown" id="menu1">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+                  <img src="img/BryanMcAnulty.png" /> <span>Bryan McAnulty</span>
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="settings.html">Account</a></li>
+                  <li><a href="settings.html">Settings</a></li>
+                  <li class="divider"></li>
+                  <li><a href="login.html">Logout</a></li>
+                </ul>
+            </span>
+        </div>
+    </div> <!-- END Layout North -->
+    
+    <div class="ui-layout-west">
+      
+        <ul class="nav nav-tabs sidebar-tabs">
+          <li class="active"><a href="#1" data-toggle="tab">Pages</a></li>
+          <li><a href="#2" data-toggle="tab">Messages</a></li>
+          <li><a href="#3" data-toggle="tab">Files</a></li>
+        </ul>
+        <div class="tab-content ui-layout-content">
+            <div class="tab-pane active" id="1">
+                <ul>
+                    <a href="index.html"><li class="list-box">
+                      <p><i class="icon-home icon-white"></i> Dashboard </p>
+                    </li></a>
+                    <a href="message-view.html"><li class="list-box">
+                      <p><i class="icon-inbox icon-white"></i> Messages </p><span class="badge">3</span>
+                    </li></a>
+                    <a href="graph-view.html"><li class="list-box">
+                      <p><i class="icon-signal icon-white"></i> Graphs </p><span class="badge">15</span>
+                    </li></a>
+                    <a href="calendar.html"><li class="list-box">
+                      <p><i class="icon-calendar icon-white"></i> Calendar </p><span class="badge">8</span>
+                    </li></a>
+                    <a href="widgets.html"><li class="list-box">
+                      <p><i class="icon-cog icon-white"></i> Widgets &amp; More </p>
+                    </li>
+                    <a href="code-editor.html"><li class="list-box">
+                      <p><i class="icon-edit icon-white"></i> Code Editor </p><span class="badge">7</span>
+                    </li></a>
+                    <a href="typography.html"><li class="list-box">
+                      <p><i class="icon-font icon-white"></i> Typography </p>
+                    </li></a>
+                    <a href="ui-elements.html"><li class="list-box">
+                      <p><i class="icon-plus-sign icon-white"></i> UI Elements </p>
+                    </li></a>
+                    <a href="buttons.html"><li class="list-box">
+                      <p><i class="icon-ok-sign icon-white"></i> Buttons </p><span class="badge">33</span>
+                    </li></a>
+                    <a href="error-pages.html"><li class="list-box">
+                      <p><i class="icon-warning-sign icon-white"></i> Error Pages </p><span class="badge">404</span>
+                    </li></a>
+                </ul>
+                
+            </div>
+            <div class="tab-pane" id="2">
+                <div class="message-box">
+                    <img src="img/BryanMcAnulty.png" />
+                    <h5>Bryan McAnulty <span>Today at 3:36pm</span></h5>
+                    <p>Check out all the features here! Make sure to click around everywhere so you don't miss anything.</p>
+                    <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt icon-white"></i> Reply</a>
+                </div>
+                <div class="message-box">
+                    <img src="img/2.jpg" />
+                    <h5>Ashley Green <span>July 29th, 2012 12:31pm</span></h5>
+                    <p>Make sure to check your notifictions by clicking the "3" in the top left corner.</p>
+                    <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt icon-white"></i> Reply</a>
+                </div>
+                <div class="message-box">
+                    <img src="img/4.jpg" />
+                    <h5>Catalina Butnaru <span>July 28th, 2012 11:26am</span></h5>
+                    <p>Try collapsing and expanding the left and right sidebars using the buttons in the footer.</p>
+                    <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt icon-white"></i> Reply</a>
+                </div>
+                <div class="message-box">
+                    <img src="img/3.jpg" />
+                    <h5>Jack Koner <span>July 27th, 2012 2:16pm</span></h5>
+                    <p>Also look through the different tabs on each of the sidebars.</p>
+                    <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt icon-white"></i> Reply</a>
+                </div>
+                <div class="message-box">
+                    <img src="img/avatar-profile.png" />
+                    <h5>New User <span>July 25th, 2012 3:01pm</span></h5>
+                    <p>I need to add a profile image.</p>
+                    <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt icon-white"></i> Reply</a>
+                </div>
+                <div class="message-box">
+                    <img src="img/1.jpg" />
+                    <h5>Matt Brink <span>July 24th, 2012 5:02pm</span></h5>
+                    <p>Uploaded a new file Build a Web App project.</p>
+                    <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt icon-white"></i> Reply</a>
+                </div>
+                <div class="message-box">
+                    <img src="img/BryanMcAnulty.png" />
+                    <h5>Bryan McAnulty <span>July 20th, 2012 1:42pm</span></h5>
+                    <p>Added a new comment to the Build a Web App project.</p>
+                    <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt icon-white"></i> Reply</a>
+                </div>
+                <div class="message-box">
+                    <img src="img/avatar-profile.png" />
+                    <h5>New User <span>July 19th, 2012 2:35pm</span></h5>
+                    <p>Uploaded a new file to the Client Redesign Project.</p>
+                    <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt icon-white"></i> Reply</a>
+                </div> 
+                <p>Date: <div id="datepicker"></div></p>    
+            </div>
+            <div class="tab-pane files-pane" id="3">
+                <strong>Project Files:</strong>
+                <ul>
+                <li><i class="icon-folder-open icon-white"></i>Main-Files</li>
+                  <ul>
+                      <li><i class="icon-file icon-white"></i>index.html</li>
+                      <li><i class="icon-file icon-white"></i>settings.html</li>
+                      <li><i class="icon-file icon-white"></i>header.html</li>
+                      <li><i class="icon-folder-open icon-white"></i>More-Files</li>
+                      <ul>
+                          <li><i class="icon-file icon-white"></i>jquery.js</li>
+                          <li><i class="icon-file icon-white"></i>javascript.js</li>
+                          <li><i class="icon-file icon-white"></i>three.css</li>
+                          <li><i class="icon-file icon-white"></i>four.css</li>
+                          <li><i class="icon-file icon-white"></i>five.css</li>
+                      </ul>
+                      <li><i class="icon-file icon-white"></i>four.html.erb</li>
+                      <li><i class="icon-file icon-white"></i>five.html.erb</li>
+                  </ul>
+                <li><i class="icon-folder-open icon-white"></i>Main-Files</li>
+                  <ul>
+                      <li><i class="icon-file icon-white"></i>index.html</li>
+                      <li><i class="icon-file icon-white"></i>settings.html</li>
+                      <li><i class="icon-file icon-white"></i>header.html</li>
+                      <li><i class="icon-folder-open icon-white"></i>More-Files</li>
+                      <ul>
+                          <li><i class="icon-file icon-white"></i>jquery.js</li>
+                          <li><i class="icon-file icon-white"></i>javascript.js</li>
+                          <li><i class="icon-file icon-white"></i>three.css</li>
+                          <li><i class="icon-file icon-white"></i>four.css</li>
+                          <li><i class="icon-file icon-white"></i>five.css</li>
+                      </ul>
+                      <li><i class="icon-file icon-white"></i>four.html.erb</li>
+                      <li><i class="icon-file icon-white"></i>five.html.erb</li>
+                  </ul>
+                <li><i class="icon-folder-open icon-white"></i>Main-Files</li>
+                  <ul>
+                      <li><i class="icon-file icon-white"></i>index.html</li>
+                      <li><i class="icon-file icon-white"></i>settings.html</li>
+                      <li><i class="icon-file icon-white"></i>header.html</li>
+                      <li><i class="icon-folder-open icon-white"></i>More-Files</li>
+                      <ul>
+                          <li><i class="icon-file icon-white"></i>jquery.js</li>
+                          <li><i class="icon-file icon-white"></i>javascript.js</li>
+                          <li><i class="icon-file icon-white"></i>three.css</li>
+                          <li><i class="icon-file icon-white"></i>four.css</li>
+                          <li><i class="icon-file icon-white"></i>five.css</li>
+                      </ul>
+                      <li><i class="icon-file icon-white"></i>four.html.erb</li>
+                      <li><i class="icon-file icon-white"></i>five.html.erb</li>
+                  </ul>
+                </ul>
+            </div>
+        </div>
+        
+  <div class="sidebarFooterStats">
+        <div>
+            <i class="icon-chevron-up icon-white"></i>
+            <strong>$152,290</strong>
+            <p>Revenue</p> 
+        </div>
+        <div>
+            <i class="icon-chevron-down icon-white"></i>
+            <strong>1873</strong>
+            <p>Users</p> 
+        </div>
+    </div>
+  <div class="sidebarFooter">
+    <button id="newb">New</button>
+    <button id="settingsb">Settings</button>
+    <div id="dragb" class="ui-layout-resizer
+           ui-layout-resizer-west
+           ui-layout-resizer-open
+           ui-layout-resizer-west-open">
+        </div>
+  </div>
+
+    </div> <!-- END Layout West -->
+    
+    <div class="ui-layout-south footer">
+      
+    </div> <!-- END Layout South -->
+    
+    <div class="ui-layout-east">
+      
+        <div class="ui-layout-content"> 
+            
+            <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  Sidebar Profile Information
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-body in collapse">
+                <div class="accordion-inner">
+                    <div class="message-box">
+                        <img src="img/4.jpg" />
+                        <h5>Catalina Butnaru <span>July 25th, 2012 4:53pm</span></h5>
+                        <p>Place information about customers or teammates here.</p>
+                        <br>
+                            <p><i class="icon-plus icon-white"></i> 4 Open Cases</p>
+                            <p><i class="icon-check icon-white"></i> 11 Tasks Assigned</p>
+                            <p><i class="icon-inbox icon-white"></i> 9 Messages</p>
+                        <br>
+                        <div class="progress">
+                          <div class="bar"
+                               style="width: 60%;"></div>
+                        </div>
+                        <div id="datepicker"></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                  More Collapsed Sidebar Info
+                </a>
+              </div>
+                <div id="collapseTwo" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                        <p><strong>Add Any Type of Content</strong></p>
+                        <p>Easily create sidebar footers, more collapsable panels, tabs and more.</p>
+                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        </div> <!-- /sidebarTabs -->
+        
+        <div class="sidebarFooter">
+            
+        </div>
+    </div> <!-- END Layout East -->
+            
+  <div class="ui-layout-center">
+    <div id="view-holder" class="ui-layout-content">
+        <ul class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Recent Messages</a></li>
+            <li><a href="#">Message Title</a></li>
+        </ul>
+        <h1 class="message-header">Message Title</h1>
+        <button id="fullscreenb"><i class="icon-fullscreen"></i></button>
+        <div class="message-box">
+            <img src="img/BryanMcAnulty.png" />
+            <h5>Bryan McAnulty <span>Today at 3:36pm</span></h5>
+            <p>Check out all the features here! Make sure to click around everywhere so you don't miss anything.</p>
+            <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt"></i> Reply</a>
+        </div>
+        <div class="message-box">
+            <img src="img/2.jpg" />
+            <h5>Ashley Green <span>July 29th, 2012 12:31pm</span></h5>
+            <p>Make sure to check your notifictions by clicking the "3" in the top left corner.</p>
+            <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt"></i> Reply</a>
+        </div>
+        <div class="message-box">
+            <img src="img/4.jpg" />
+            <h5>Catalina Butnaru <span>July 28th, 2012 11:26am</span></h5>
+            <p>Try collapsing and expanding the left and right sidebars using the buttons in the footer.</p>
+            <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt"></i> Reply</a>
+        </div>
+        <div class="message-box">
+            <img src="img/3.jpg" />
+            <h5>Jack Koner <span>July 27th, 2012 2:16pm</span></h5>
+            <p>Also look through the different tabs on each of the sidebars.</p>
+            <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt"></i> Reply</a>
+        </div>
+        <div class="message-box">
+            <img src="img/avatar-profile.png" />
+            <h5>New User <span>July 25th, 2012 3:01pm</span></h5>
+            <p>I need to add a profile image.</p>
+            <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt"></i> Reply</a>
+        </div>
+        <div class="message-box">
+            <img src="img/1.jpg" />
+            <h5>Matt Brink <span>July 24th, 2012 5:02pm</span></h5>
+            <p>Uploaded a new file Build a Web App project.</p>
+            <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt"></i> Reply</a>
+        </div>
+        <div class="message-box">
+            <img src="img/BryanMcAnulty.png" />
+            <h5>Bryan McAnulty <span>July 20th, 2012 1:42pm</span></h5>
+            <p>Added a new comment to the Build a Web App project.</p>
+            <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt"></i> Reply</a>
+        </div>
+        <div class="message-box">
+            <img src="img/avatar-profile.png" />
+            <h5>New User <span>July 19th, 2012 2:35pm</span></h5>
+            <p>Uploaded a new file to the Client Redesign Project.</p>
+            <a href="#replyModal" data-toggle="modal" class="reply-to"><i class="icon-share-alt"></i> Reply</a>
+        </div>
+
+        <div class="addComment">
+          <h3>Add a Comment:</h3>
+          <textarea placeholder="Leave a comment, post a task..."></textarea>
+          <button class="btn-primary btn comment-btn">Post</button>
+          <br />
+        </div>        
+
+    </div> <!-- END view-holder -->
+    <div class="codeFooter">
+      <button id="slideleftb" class="closed">Slide West</button>
+      
+      <button id="sliderightb" class="closed">Slide East</button> 
+    </div>
+
+</div> <!-- END Layout Center -->
+
+<!--Modal Window Templates-->
+    <div class="modal fade" id="myModal">
+          <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3>Add a New Task</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Title:</h3>
+            <input type="text" placeholder="Title">
+            <h4>Description:</h4>
+            <textarea style="width:98%; height:100px;" placeholder="Describe your task..."></textarea>
+            <p>Lots of things can go here...</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary">Save Task</a>
+          </div>
+    </div>
+    <div class="modal fade" id="replyModal">
+          <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3>Reply:</h3>
+          </div>
+          <div class="modal-body">
+            <textarea style="width:98%; height:100px;"></textarea>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary">Post Reply</a>
+          </div>
+    </div>
+
+</body>
+</html>
